@@ -10,6 +10,8 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -114,6 +116,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
+  font-family: 'Skranji', cursive;
 }
 @media (min-width: 1200px) {
   h1, .h1 {
@@ -318,8 +321,8 @@ caption {
 }
 
 th {
-  text-align: inherit;
   text-align: -webkit-match-parent;
+  text-align: inherit;
 }
 
 thead,
@@ -11557,6 +11560,7 @@ body {
 }
 
 body {
+  width: 100%;
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
   color: #fff;
@@ -11567,8 +11571,9 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("https://cdn.wallpapersafari.com/42/81/xEjYJQ.jpg") top right no-repeat;
+  /* background: #040404 url("https://cdn.wallpapersafari.com/42/81/xEjYJQ.jpg") top right no-repeat; */
   background-size: cover;
+  background: #1a032b;
   left: 0;
   right: 0;
   top: 0;
@@ -11580,7 +11585,7 @@ body::before {
   color: skyblue;
 }
 
-.waviy {
+/* .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 60px;
@@ -11601,13 +11606,157 @@ body::before {
   20% {
     transform: translateY(-20px)
   }
-}
+} */
 
 .profile{
+  cursor: pointer;
   transition: 100ms;
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
 }
-.profile:hover{
-  transform: translate3d(10px,0px,20px); 
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+
+#introduction {
+  cursor: pointer;
+}
+
+.x{
+  cursor: pointer;
+  letter-spacing: .1em;
+  transition: text-shadow .3s;
+}
+.x:hover {
+  position: flex;
+  color: red;
+  text-shadow: 0 0 .65px red, 0 0 .65px red;
+  
+}
+
+.skill {
+  transition: 0.3s;
+}
+.skill:hover{
+  color: red;
+  text-shadow: 0 0 .65px red, 0 0 .65px red;
+  transform: scale(1.1);
+}
+.imgproject{
+  transition: transform .2s;
+}
+
+.imgproject:hover{
+  transform: scale(1.1);
+}
+
+
+.effectthis {
+	background: rgba(16, 83, 180, 0.42);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(16, 83, 180, 0.35);
+	transition: .5s;
+}
+.effectthis:hover {
+	background: rgba(6, 57, 129, 0.42);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(16, 83, 180, 0.35);
+}
+
+.effectthisred {
+	background:  #131124;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(182, 24, 71, 0.24);
+	transition: .5s;
+}
+.effectthisred:hover {
+	background:  rgba(144, 10, 50, 0.24);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(144, 10, 50, 0.24);
+}
+
+.profileimage {
+  object-fit: cover;
+  min-height: 500px;
+  max-height: 500px;
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-animation: bg-spin 3s linear infinite;
+          animation: bg-spin 3s linear infinite;
+  transition: 0.6s;
+}
+
+.profileimage:hover {
+  transform: scale(0.98);
+}
+
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.zoomthis{
+  transition: 100ms;
+}
+.zoomthis:hover{
+  transform: scale(1.1);
+}
+.profile{
+  background: rgb(160,11,11);
+  background: linear-gradient(90deg, rgba(160,11,11,1) 0%, rgba(121,9,9,1) 35%, rgba(160,47,47,1) 75%, rgba(255,0,0,1) 100%);
+}
+.box {
+  display:flex;
+  transition: transform .2s;
+}
+.box:hover{
+  transform: scale(1.1);
+}
+mode-viewer { margin:0, auto}
+
+#asdf {
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  user-select: none;
+}
+
+/* Default font size for larger screens */
+#text1,
+#text2 {
+  font-size: 10vh;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  #text1,
+  #text2 {
+    font-size: 8vh; /* You can adjust the size as needed for smaller screens */
+  }
 }
