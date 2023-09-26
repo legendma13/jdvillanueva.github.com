@@ -11757,6 +11757,6 @@ mode-viewer { margin:0, auto}
 @media (max-width: 768px) {
   #text1,
   #text2 {
-    font-size: 8vh; /* You can adjust the size as needed for smaller screens */
+    font-size: 7vh; /* You can adjust the size as needed for smaller screens */
   }
 }
